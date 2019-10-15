@@ -1,0 +1,38 @@
+.header{
+    background: hsl(0, 0%, 100%);
+    height: 96px;
+    border-bottom: 1px #cccccc solid;
+}
+
+.navbar-brand{
+    background: #4aaaa5;
+    color: white;
+    padding: 23.5px;
+    margin: 0;
+    font-family:'Georgia', Times, Times New Roman, serif;
+    font-size: 32px;
+    font-weight: bold;
+
+}
+
+.navbar{
+    padding: 0;
+}
+
+
+ul{
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    list-style-type: none;
+    margin: 0;
+}
+
+.link-divider{
+    color:#d3d3d3;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #777777;
+}
