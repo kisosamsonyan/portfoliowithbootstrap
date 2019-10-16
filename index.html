@@ -4,53 +4,91 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <!-- Bootstrap CSS link -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="css/style.css">
-
 <title>About</title>
+
 </head>
 
 <body background="images/bloom.png">
-    <div class="header"> 
+
+    <div class="header">
         <div class="container">
-            <nav class="navbar navbar-expand-lg bg-white">
-                <a class="navbar-brand" href="#">Kristine Samsonyan</a>
-                
-               
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                        <a class="nav-link" href="index.html">About <span class="link-divider">|</span></a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="portfolio.html">Portfolio<span class="link-divider">|</span></a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
+            
+                    <!-- add the "row" to the div below which contains 12 colums that can be divided however we want -->
+                    <nav class="row navbar navbar-expand-md bg-white">
+                        <!-- so I used a few different column adjustments... col-auto, used below, uses only the amount needed to fit the content you have in the column.  -->
+
+                        <!-- the md stands for large , which is 992 px -->
+
+                        <div class="col-md-auto col-12 px-0 ">
+                            <a class="navbar-brand" href="#">Kristine Samsonyan</a>
+                        </div>
                         
-                    </ul>
+                        <!-- col by itself uses the rest of the amount that is left in the row, which has a total of 12 columns. so whatever was not used by the "col-auto" above.  -->
+                        
+                        <div class="col-md col-12 px-0">
+                            <!-- justify-content-end is a "flexbox" tool that bootstrap uses, it pretty much takes teh content that it wraps end pushes it to the end, horizontally-->
+                            <ul class="navbar-nav justify-content-end pl-2 pl-md-0">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html">About<span class="link-divider">|</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="portfolio.html">Portfolio<span class="link-divider">|</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.html">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </nav>
+                
+            
+        </div>
+    </div>
+
+    <!-- I put the content into this bootstrap container, same as the header so that they have the same width. The about-me-container makes the background white -->
+    <div class="container about-me-container"> 
+        <div class="row">
+            <div class="col-12">
+                <div class="content">
+                    <h2 class="about-me">About Me</h2>
+                    <hr class="about-me-line">
+                    
+                    <div class="row">
+                        <!-- the lg stands for large , which is 1200 px -->
+                        <div class="col-lg-4 col-12">
+                            <img class="profile-img" src="images/photo.jpg" alt="my photo">
+                        </div>
+                        <div class="col-lg-8 col-12 mt-3 mt-lg-0">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero magni quisquam esse quaerat! Facere laborum distinctio temporibus recusandae? Nobis saepe dignissimos earum fugit error esse commodi minus quod totam quibusdam. 
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nulla blanditiis, tenetur ipsam ea, harum sit itaque neque quas aperiam eveniet optio, omnis numquam aut quaerat doloribus quis ex. Facere laborum distinctio temporibus recusandae? Nobis saepe dignissimos earum fugit error esse commodi minus quod totam quibusdam.</p>
+                        </div>
+                        <div class="col-12">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero magni quisquam esse quaerat! Facere laborum distinctio temporibus recusandae? Nobis saepe dignissimos earum fugit error esse commodi minus quod totam quibusdam. 
+                            </p>
+                
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero magni quisquam esse quaerat! Facere laborum distinctio temporibus recusandae? Nobis saepe dignissimos earum fugit error esse commodi minus quod totam quibusdam. 
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nulla blanditiis, tenetur ipsam ea, harum sit itaque neque. acere laborum distinctio temporibus recusandae.</p>
+                        </div>
+                    </div>
                 </div>
-             </nav>
-    
+            </div>
         </div>
     </div>
     
-    
-    
 
-  
-
-
-
-
-
-
-
-
-
+    <!-- the px-0 gets rid of that padding on the sides! -->
+    <div class="container-fluid px-0 footer-wrap">
+        <footer>
+            <div class="first-box"></div>
+            <div class="second-box">
+                Copyright &copy;
+            </div>
+        </footer>  
+    </div>
 
 
 
@@ -58,24 +96,4 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </html>

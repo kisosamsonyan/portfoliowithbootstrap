@@ -1,38 +1,275 @@
+html, body{
+    padding:0;
+    margin:0;
+    
+}
+
+.test{
+    padding:0;
+}
+
 .header{
-    background: hsl(0, 0%, 100%);
+    background: #ffffff;
     height: 96px;
     border-bottom: 1px #cccccc solid;
 }
 
+.navbar{
+    padding:0;
+}
+
+
+
 .navbar-brand{
     background: #4aaaa5;
     color: white;
-    padding: 23.5px;
+    padding: 23.5px 26px;
     margin: 0;
     font-family:'Georgia', Times, Times New Roman, serif;
-    font-size: 32px;
-    font-weight: bold;
-
+    font-size:32px;
+    font-weight:bold;
 }
 
 .navbar{
-    padding: 0;
+    padding:0;
 }
 
 
-ul{
-    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-    list-style-type: none;
-    margin: 0;
+/* added these classes from the old style.css */
+
+/* .container{
+    width:960px;
+} */
+.about-me-container{
+    background:white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+.profile-img{
+    width:265px;
+    float: left;
+    margin-right: 20px;
+    padding-top: 10px
+
+}
+
+p{
+
+    color:#777777;
+    line-height: 2;
+}
+
+.about-me{
+    color:#4aaaa5;
+    margin-top:34px;
+    font-family:"Times New Roman";
+    font-size:24px;
+    font-weight:bold;
 }
 
 .link-divider{
     color:#d3d3d3;
     margin-left: 15px;
-    margin-right: 15px;
+    
 }
 
+.about-me-line{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    background-color:#dfdfdf; 
+    
+}
+
+.first-box{
+
+    background-color: #4aaaa5;
+    height: 10px;
+}
+
+footer{
+    padding-top: 80px;
+}
+
+/* here is the sticky bonus! :) */
+.footer-wrap{
+    position:sticky;
+    bottom:0;
+}
+
+.second-box{
+    background-color: #666666;
+    text-align: center;
+    color: rgb(204, 199, 199);
+    font-size:12px;
+    padding-top: 20px;
+
+}
 ul li a{
-    text-decoration: none;
+    text-decoration:none;
     color: #777777;
 }
+ul li a:hover{
+    color: #000000;
+    cursor:pointer;
+}
+.navbar-brand:hover{
+    color:white;
+}
+
+
+
+ /*Portfolio Section */
+
+.portfolio-pics img{
+    height: 200px;
+    width: 267px;
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.items{
+    display: inline;
+    position: relative;
+
+}
+
+.portfolio-line{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color:#dfdfdf;
+}
+
+.image-heading{
+
+    position: absolute;
+    background-color: #4aaaa5;
+    color: white;
+    top: 50px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    left: 30px;
+    width: 267px;
+    text-align: center;
+}
+
+/*Contact Section */
+
+input[type=text]{
+
+    width: 850px;
+    margin-top: 5px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    color:  #777777;
+}
+
+label{
+    margin-left: 50px;
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    color:  #777777;
+    
+}
+
+
+#message{
+    margin-bottom: 20px;
+    padding-bottom: 100px;  
+}
+
+.contact-button{
+    background-color: #4aaaa5;
+    color: white;
+    padding: 10px 20px;
+    font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 18px;
+    margin-left: 50px;
+    margin-bottom: 30px;
+    border-radius: 2px;
+    border: none;
+    
+    }
+
+.contact-line{
+
+margin-top: 20px;
+margin-bottom: 10px;
+background-color:#dfdfdf;
+}
+
+
+
+
+/* Adding media queries (this is pretty much saying, "at this specific size, do this")*/
+
+/* what this first @media does is make your container width 960px, which is what they wanted, instead of the default 1200px */
+@media (min-width: 1200px) {
+    .container{
+        max-width: 960px;
+    }
+}
+
+
+/* the rest of these are just saying when its at a different size, do something specific. for example, make the headers height 240, or the link dividers to go away. 
+you can see the affects of these when you resize your page. it makes the logo width and the image 100% so its prettier and centers the texts.  */
+
+
+@media (max-width:991px){
+    .profile-img{
+        width:100%;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .header{
+        height:240px;
+    }
+    .link-divider{
+        display:none;
+    }
+    .navbar-brand{
+        width:100%;
+        text-align:center;
+        font-size:2em;
+    }
+    ul{
+        margin-top:15px;
+        text-align:center;
+    }
+    .about-me{
+        text-align:center;
+    }
+
+    .portfolio-pics img{
+        display: block;
+        margin-left: auto;
+        margin-right:auto;
+    }
+
+    .image-heading{
+
+        top: 20px;
+        left: 30px;
+       
+    }
+    
+
+
+}
+
+@media (max-width:378px){
+    .navbar-brand{
+        font-size:1.2em;
+    }
+    .header{
+        height:220px;
+    }
+
+}
+
